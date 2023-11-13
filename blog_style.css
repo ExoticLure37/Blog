@@ -1,0 +1,122 @@
+@font-face {
+    font-family: Futura;
+    src: url(./Futura-Bold.ttf);
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(./Gilroy-Medium.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+    background-color: #eeeeee;
+}
+
+*::selection {
+    color: #fff;
+    background-color: #000;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+}
+
+#nav {
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+#nav #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#links {
+    padding: 10px;
+}
+
+#nav-part1 {
+    /* background-color: RED; */
+    height: 83px;
+    overflow: hidden;
+}
+#nav-part1 img{
+    display: block;
+    width: 4.9vw;    
+    height: 10vh
+}
+#nav-part1 svg {
+    display: block;
+}
+
+#nav-part2 #links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0 20px;
+    font-family: futura;
+}
+#animate{
+    height: 40vh;
+    align-items:center;
+    margin-left: 40%;
+    justify-content: center;
+}
+
+.container{
+    height: 70vh;
+    width: 246px;
+    overflow:hidden; 
+}
+
+.container .text{
+    position: relative;
+    color: #4070F4;
+    font-size: 30px;
+    font-family:futura;
+}
+
+.container .text.first-text{
+    color:black;
+}
+.text.sec-text:before{
+    content: " ";
+    position:absolute;
+    top:0;
+    left:0;
+    height: 40px;
+    width:100%;
+    background-color: #eeeeee;
+    border-left: 3px solid  rgb(247, 141, 208);
+    animation: animate 4s steps(16) infinite;
+}
+
+@keyframes animate {
+    40%, 60% {
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+
